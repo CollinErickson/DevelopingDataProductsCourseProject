@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>U.S. State Data</title>
+  <meta charset="utf-8">
+  <meta name="description" content="U.S. State Data">
+  <meta name="author" content="Collin">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>U.S. State Data</h1>
+    <h2>Course Project for Developing Data Products</h2>
+    <p>Collin<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>My app</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The app I created was made using Shiny and R.</p>
+
+<p>It can be found here on <a href="https://collin.shinyapps.io/ShinyState/">shinyapps.io</a>.</p>
+
+<p>It produces customizable scatter plots using data for each state in the United States.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Data comes from R dataset &#39;state&#39;</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Data for each state includes eight different categories found in state.x77.</p>
+
+<p>The data is taken from the 1970s, so it is not up-to-date.</p>
+
+<pre><code class="r">head(state.x77,3)
+</code></pre>
+
+<pre><code>##         Population Income Illiteracy Life Exp Murder HS Grad Frost   Area
+## Alabama       3615   3624        2.1    69.05   15.1    41.3    20  50708
+## Alaska         365   6315        1.5    69.31   11.3    66.7   152 566432
+## Arizona       2212   4530        1.8    70.55    7.8    58.1    15 113417
+</code></pre>
+
+<pre><code class="r">dim(state.x77)
+</code></pre>
+
+<pre><code>## [1] 50  8
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Widgets</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;' class='centered'>
+  <p>Widgets in the sidebar allow you to customize the plot. </p>
+
+<p>A checkbox toggles whether the state abbreviations are shown next to the corresponding data points.</p>
+
+<p>The variables to be plotted against each other can be selected with the drop-down lists.</p>
+
+<p>A checkbox group determines which regions are shown in the plot (West, Northeast, North Central, South)</p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <p><img src="assets/img/sidebar.png" alt=""></p>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>The plot</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The scatter plot will show the data for x and y that have been selected and only for the regions selected.
+A regression line is added to the plot to show the line of best fit. The equation for this line and its R-squared value is shown below the plot.</p>
+
+<p><img src="assets/img/plot.png" alt=""></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='My app'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Data comes from R dataset &#39;state&#39;'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Widgets'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='The plot'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
